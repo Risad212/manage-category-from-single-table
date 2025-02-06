@@ -24,20 +24,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <?php
-          if ($result->num_rows > 0) {
-            // Output data of each row
-            while ($row = $result->fetch_assoc()) {
-          ?>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"><?php echo $row['name'] ?></a>
-              </li>
-          <?php
-            }
-          } else {
-            echo "0 results found.";
-          }
-          ?>
+          <?php show_menu($connection) ?>
         </ul>
       </div>
     </nav>
